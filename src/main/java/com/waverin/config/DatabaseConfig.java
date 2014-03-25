@@ -45,7 +45,7 @@ public class DatabaseConfig {
               
             return dataSource;  
     }  
-    @Bean
+   /* @Bean
 	public LocalSessionFactoryBean sessionFactory() {
 		LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
 		sessionFactoryBean.setDataSource(dataSource());
@@ -68,6 +68,6 @@ public class DatabaseConfig {
 		transactionManager.setSessionFactory(sessionFactory().getObject());
 		return transactionManager;
 	}
-  
+  */
 
 }

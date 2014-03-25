@@ -152,52 +152,7 @@
                 <artifactId>commons-logging</artifactId>
                 <version>${version.commons.logging}</version>
             </dependency>
-      
-        <dependency>
-            <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.0-api</artifactId>
-            <scope>provided</scope>
-            	<version>1.0.1.Final</version>
-        </dependency>
-
-	    <!-- JSR-303 (Bean Validation) Implementation -->
-	    <!-- Provides portable constraints such as @Email -->
-	  
-	    <dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>4.1.0.Final</version>
-		</dependency>
-		<dependency>
-    <groupId>javax.persistence</groupId>
-    <artifactId>persistence-api</artifactId>
-    <version>1.0.2</version>
-</dependency>
-
-	    <dependency>
-	    	<groupId>org.hibernate</groupId>
-	    	<artifactId>hibernate-entitymanager</artifactId>
-	    	<version>4.1.0.Final</version>
-	    	<scope>provided</scope>
-	    </dependency>
-	    
-<dependency>
-	<groupId>org.hibernate</groupId>
-	<artifactId>hibernate-validator</artifactId>
-	<version>4.1.0.Final</version>
-</dependency>
-            
-
-	    <!-- Annotation processor that raising compilation errors whenever 
-	        constraint annotations are incorrectly used. -->
-	    <dependency>
-			<groupId>org.hibernate</groupId>
-      		<artifactId>hibernate-validator-annotation-processor</artifactId>
-      		<version>4.1.0.Final</version>
-      		<scope>provided</scope>
-		</dependency>
-	    
-        <dependency>
+              <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-javaconfig</artifactId>
             <version>1.0.0.CI-SNAPSHOT</version>
