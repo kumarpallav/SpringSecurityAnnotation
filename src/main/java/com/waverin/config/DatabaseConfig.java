@@ -21,9 +21,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan("com.waverin")
 @PropertySource("classpath:database.properties")
 public class DatabaseConfig {
-	/**
-	 * Important FINAL CONSTANTS :)
-	 */
 	private static final String PROPERTY_NAME_DATABASE_DRIVER = "jdbc.driverClassName";  
     private static final String PROPERTY_NAME_DATABASE_PASSWORD = "jdbc.password";  
     private static final String PROPERTY_NAME_DATABASE_URL = "jdbc.url";  

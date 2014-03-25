@@ -1,20 +1,32 @@
 package com.waverin.config;
 
+import java.util.Properties;
+
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
+import org.springframework.core.env.Environment;
+import org.springframework.orm.hibernate4.HibernateTransactionManager;
+import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+
 @EnableWebSecurity
 @Configurable
+
+@ComponentScan(basePackages = {"com.waverin"})
+
 @Import(DatabaseConfig.class)
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
@@ -37,7 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.deleteCookies("JSESSIONID").
 			logoutUrl("/logout")
 			.logoutSuccessUrl("/login").
-		and().authorizeRequests()
+		and().authorizeUrls()
 		.antMatchers("/**").permitAll().antMatchers("/admin/").hasRole("USER");
 
 	}
@@ -64,6 +76,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	 * 
 	 * @return
 	 */
+	/**
+	 * Important FINAL CONSTANTS :)
+	 */
+	
+
+	
 	
 
 }
